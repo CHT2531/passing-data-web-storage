@@ -36,7 +36,7 @@ welcomeFnc(); //Hello
 ```
 This probably seems fairly pointless. The really great thing about returning functions is when we use closures.
 
-A closure takes place when a function is able to access a specific instance of a local variable. In the following example that variable is *name*.
+A closure takes place when a function is able to access a specific instance of a local variable. In the following example that variable is ```name```.
 
 ```javascript
 function getWelcomeFnc(name)
@@ -53,7 +53,7 @@ welcomeMatthew(); //Hello Matthew
 welcomeFred(); //Hello Fred
 ```
 
-Each time the *getWelcomeFnc* is called the variable *name* is assigned a different value, first 'Matthew' and then 'fred'. Importantly, each time we call *getWelcomeFnc* a new instance of the variable *name* is created i.e. we don't replace an existing value. The returned function has access to a specific instance of the variable *name*. This is 'Matthew' for *welcome Matthew* and 'Fred' for *welcome Fred*. This probably all seems fairly pointless. Here's a really common use case for closures.
+Each time the ```getWelcomeFnc()``` is called the variable ```name``` is assigned a different value, first 'Matthew' and then 'fred'. Importantly, each time we call ```getWelcomeFnc()``` a new instance of the variable ```name``` is created i.e. we don't replace an existing value. The returned function has access to a specific instance of the variable ```name```. This is 'Matthew' for ```welcome Matthew()``` and 'Fred' for ```welcomeFred()```. This probably all seems fairly pointless. Here's a really common use case for closures.
 
 ### Closures - Associating data with dynamically generated elements
 In front-end web applications there is often a requirement to dynamically generate HTML elements from an array of data. Here's an example.
@@ -99,9 +99,10 @@ const students=[
 ]
 
 function getShowMsgFnc(student){
-  return function(){
-		console.log(student.name+" has a mark of "+student.mark);
-	}
+  return function()
+  {
+      console.log(student.name+" has a mark of "+student.mark);
+  }
 }
 
 const studentsFragment = document.createDocumentFragment(); //create a fragment
@@ -116,7 +117,7 @@ const stuList=document.querySelector("#stu-list"); //get hold of a <ul> element
 stuList.appendChild(studentsFragment);
 ```
 
-Now instead of attaching an event listener function directly we call *getShowMsgFnc* and pass the current student as an argument to this function. The returned function closes around this value so it can access the specific student when the list element is clicked.
+Now instead of attaching an event listener function directly we call ```getShowMsgFnc()``` and pass the current student as an argument to this function. The returned function closes around this value so it can access the specific student when the list element is clicked.
 
 ## Further Reading / References
 * Eloquent JavaScript - Higher Order Functions http://eloquentjavascript.net/05_higher_order.html
