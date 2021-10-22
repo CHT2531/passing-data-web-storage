@@ -36,7 +36,7 @@ welcomeFnc(); //Hello
 ```
 This probably seems fairly pointless. The really great thing about returning functions is when we use closures.
 
-A closure takes place when a function is able to access a specific instance of a local variable. In this example that variable is *name*.
+A closure takes place when a function is able to access a specific instance of a local variable. In the following example that variable is *name*.
 
 ```javascript
 function getWelcomeFnc(name)
