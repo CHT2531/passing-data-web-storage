@@ -28,7 +28,7 @@ function populateList(countries)
 		newLi.appendChild(newLink);
 		countriesFragment.appendChild(newLi);
 	})
-	const countriesList=document.getElementById("countries-list");
+	const countriesList=document.querySelector("#countries-list");
 	countriesList.appendChild(countriesFragment);
 }
 
