@@ -9,9 +9,9 @@ function loadData(url,callback)
 
 function populateContent(country)
 {
-	const titleEl=document.getElementById("title");
-	const capitalEl=document.getElementById("capital");
-	const populationEl=document.getElementById("population");
+	const titleEl=document.querySelector("#title");
+	const capitalEl=document.querySelector("#capital");
+	const populationEl=document.querySelector("#population");
 	titleEl.textContent = country.name;
 	capitalEl.textContent = country.capital;
 	populationEl.textContent = country.population;
