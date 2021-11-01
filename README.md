@@ -101,7 +101,7 @@ const students=[
 function getShowMsgFnc(student){
   return function()
   {
-      console.log(student.name+" has a mark of "+student.mark);
+      console.log(`${student.name} has a mark of ${student.mark}`);
   }
 }
 
