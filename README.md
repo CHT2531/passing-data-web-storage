@@ -43,7 +43,7 @@ function getWelcomeFnc(name)
 {
   return function()
   {
-    console.log("Hello "+name);
+    console.log(`Hello ${name}`);
   }
 }
 
