@@ -1,4 +1,4 @@
-# Passing Data Using a Query String
+# Passing Data Using Web Storage
 This repository contains a JavaScript application that features two pages and dynamically generated content.
 
 * Download the example
