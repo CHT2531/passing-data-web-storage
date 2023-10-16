@@ -18,7 +18,7 @@ function createHandler(country)
 
 function populateList(countries)
 {
-	const countriesFragment = document.createDocumentFragment();
+	const countriesList=document.querySelector("#countries-list");
 	countries.forEach(function(country){
 		const newLi=document.createElement("li");
 		const newLink=document.createElement("a");
@@ -26,10 +26,8 @@ function populateList(countries)
 		newLink.setAttribute("href","details.html");
 		newLink.addEventListener("click", createHandler(country), false)
 		newLi.appendChild(newLink);
-		countriesFragment.appendChild(newLi);
+		countriesList.appendChild(newLi);
 	})
-	const countriesList=document.querySelector("#countries-list");
-	countriesList.appendChild(countriesFragment);
 }
 
 function init(){
