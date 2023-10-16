@@ -71,16 +71,16 @@ function showMsg()
   console.log("You clicked on a student")
 }
 
-const studentsFragment = document.createDocumentFragment(); //create a fragment
+const stuList=document.querySelector("#stu-list"); //get hold of a <ul> element
 students.forEach(function(student){
   const newLi=document.createElement("li"); //create a new <li>
   newLi.textContent=student.name; //add the student's name
   newLi.addEventListener("click",showMsg,false); // add an event listener
-  studentsFragment.appendChild(newLi); //insert into the <ul> element
+  stuList.appendChild(newLi); //insert into the <ul> element
 })
 
-const stuList=document.querySelector("#stu-list"); //get hold of a <ul> element
-stuList.appendChild(studentsFragment);
+
+
 
 ```
 
@@ -105,16 +105,14 @@ function getShowMsgFnc(student){
   }
 }
 
-const studentsFragment = document.createDocumentFragment(); //create a fragment
+const stuList=document.querySelector("#stu-list"); //get hold of a <ul> element
 students.forEach(function(student){
   const newLi=document.createElement("li"); //create a new <li>
   newLi.textContent=student.name; //add the student's name
   newLi.addEventListener("click",getShowMsgFnc(student),false); // add an event listener
-  studentsFragment.appendChild(newLi); //insert into the <ul> element
+  stuList.appendChild(newLi); //insert into the <ul> element
 })
 
-const stuList=document.querySelector("#stu-list"); //get hold of a <ul> element
-stuList.appendChild(studentsFragment);
 ```
 
 Now instead of attaching an event listener function directly we call ```getShowMsgFnc()``` and pass the current student as an argument to this function. The returned function closes around this value so it can access the specific student when the list element is clicked.
