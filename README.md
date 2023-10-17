@@ -12,7 +12,7 @@ Now try the following:-
   * Modify the JavaScript code so that the continent information is displayed for each country along with capital and population.
 
 * Can you use the SWAPI API that we used last week - https://www.swapi.tech/ to load the data instead of hard-coded JSON files.
-  * You will need to pass the id number of a vehicle in the query string e.g.  https://www.swapi.tech/api/vehicles for the first request, and then requests for specific vehicle on the details page e.g. https://www.swapi.tech/api/vehicles/4.
+  * You will need to load all the vehicles i.e.  https://www.swapi.tech/api/vehicles for the first request, and then make requests for specific vehicle on the details page e.g. https://www.swapi.tech/api/vehicles/4.
 
 ## Closures
 This example relies on a programming concept known as a *closure*. This is explained below, but you'll probably need to do some additional reading to fully grasp this important programming concept.
